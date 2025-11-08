@@ -1,0 +1,43 @@
+//4.a linear search concept
+#include <stdio.h>
+struct student
+{
+    int rno;
+    float cgpa;
+} s[10]; // array of students
+int main()
+{
+
+        int i,
+        n, found = 0;
+    float key = 9.5;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    // Input student details
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter Roll No and CGPA of Student[%d]: ", i + 1);
+        scanf("%d %f", &s[i].rno, &s[i].cgpa);
+    }
+
+    printf("\nRoll No. of students having CGPA = %.1f:\n", key);
+
+    // Linear search
+    for (i = 0; i < n; i++)
+    {
+        if (s[i].cgpa == key)
+        {
+            printf("[%d]\n", s[i].rno);
+            found = 1;
+        }
+    }
+
+    if (found == 0)
+    {
+        printf("None of the students has CGPA = %.1f\n", key);
+    }
+
+    return 0;
+}
