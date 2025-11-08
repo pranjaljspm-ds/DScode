@@ -15,6 +15,15 @@ int main() {
  printf("\n");
  return 0;
 }
+ALGO 1.a
+Step 1: START 
+Step 2: Declare n1, n2, n3  
+Step 3: Initialize var 
+Step 4: Enter the no. of terms for Fibonacci Series  
+Step 5: n1 & n2  
+Step 6: for loop (i=2; i<num; i++) n3=n2+n1 
+n1=n2 N2=n3 
+Step 7: print n3 Step 8: STOP
 
 //1.b compare 3 numbers and find min and max
 #include <stdio.h>
@@ -40,6 +49,16 @@ int main() {
  printf("Minimum number: %d\n", min);
  return 0;
 }
+ALGO 1.b
+step1 start
+step2 input 3 no. : num1,num2,num3
+step3 initialise max = num1 and min = num1
+step4 compare for max :: 1.if num2>max then max = num2
+                         2.if num3>max then max = num3
+step5 campare for min :: 1.if num2<min then min = num2
+                         2.if num3<min then min = num3
+step6 display max and min
+step7 end
 
 //2.a program to read marks of students of class and display it
 #include <stdio.h>
@@ -59,6 +78,17 @@ int main() {
  }
  return 0;
 }
+
+Algorithm→2.a
+Step1:Start
+Step2:In put total number of students n
+
+Step3:Declare on array marks [n]
+
+Step4:For each student (i=o to n-1);
+                        input marks [i]
+Step5:For each Student (i=o to n-1);
+Step6:End
 
 //2.b  concept of 1d array and finding the sum of the array
 #include <stdio.h>
@@ -82,6 +112,16 @@ int main()
     printf("The sum of the array elements is: %d\n", sum);
     return 0;
 }
+
+Algorithm→2.b
+Step Start
+Step 2: Input number of elementn.
+Step 3: Declare array arr[n] and variable sum=0
+Step 4: For each element (i=0 to 1):
+               Input arr (ⅰ)
+              Add arr (i) to sum
+Step 5: Display total Sum
+Step 6 END
 
 //3.a write a program to add two matrix and display it
 #include <stdio.h>
@@ -130,6 +170,26 @@ int main(void) {
 
     return 0;
 }
+
+Algorithm→3.a
+Step 1: Start
+Step 2: Input number of rows (m) and columns (n)
+Step 3: Declare two matrices A[m][n] and B[m][n]
+Step 4: Declare result matrix C[m][n]
+Step 5: Input elements of matrix A using loop
+  for i = 0 to m-1
+   for j = 0 to n-1
+    Input A[i][j]
+Step 6: Input elements of matrix B using loop
+  for i = 0 to m-1
+   for j = 0 to n-1
+    Input B[i][j]
+Step 7: Perform addition
+  for i = 0 to m-1
+   for j = 0 to n-1
+    C[i][j] = A[i][j] + B[i][j]
+Step 8: Display resultant matrix C
+Step 9: Stop
 
 //3.b write a program to implement matrix multiplication
 #include <stdio.h>
@@ -185,6 +245,24 @@ int main() {
  return 0;
 }
 
+
+Algorithm 3.b – Multiplication of two matrices
+Step 1: Start
+Step 2: Declare 2D arrays A[10][10], B[10][10] and C[10][10]
+Step 3: Input rows (r1, r2) and columns (c1, c2) of both matrices
+Step 4: Check condition
+  If c1 ≠ r2 → Display “Multiplication not possible” and Stop
+Step 5: Input elements of first matrix A
+Step 6: Input elements of second matrix B
+Step 7: Initialize all elements of C = 0
+Step 8: Perform multiplication using triple nested loop
+for i = 0 to r1-1
+ for j = 0 to c2-1
+  for k = 0 to c1-1
+   C[i][j] = C[i][j] + A[i][k] * B[k][j]
+Step 9: Display resultant matrix C
+Step 10: Stop
+
 //4.a linear search concept
 #include <stdio.h>
 struct student
@@ -228,6 +306,13 @@ int main()
 
     return 0;
 }
+Algorithm→4.a
+Step 1: START 
+Step 2: Define structure Step 
+3: Declare an array  
+Step 4: Input data…Use for loop 
+Step 5: Search CGPA….Display the result  
+Step 6: STOP 
 
 // 4.b binary search concept
 #include <stdio.h>
@@ -273,6 +358,13 @@ int main()
         printf("None of student is having CGPA equal to 6.00");
     }
 }
+Algorithm→4.b
+Step 1: START 
+Step 2: Define Structure 
+Step 3: Declare mid, high, found  
+Step 4: Use else if condition  
+Step 5: Display the result 
+Step 6: STOP
 
 //5.a sort the age and arrange them in ascending order using bubble sort
 #include <stdio.h>
@@ -326,8 +418,13 @@ int main()
     printf("\n");
     return 0;
 }
+Algorithm→5.a
+Step 1: START 
+Step 2: Initialize the array i.e. a[5] 
+Step 3: Implement Bubble Sort in the code Step 4: Use 2 loop (i.e. of i & j) Step 
+5: Display the sorted array Step 6: STOP
 
-//5,b sort and arrange age using quick sort
+//5.b sort and arrange age using quick sort
 #include <stdio.h>
 
 // Function to swap two elements
@@ -389,6 +486,13 @@ int main()
     printf("\n");
     return 0;
 }
+Algorithm→5.b
+Step 1: START 
+Step 2: Declare variables n,i 
+Step 3: Use for loop     
+Step 4: Use quick sort 
+Step 5: Display the sorted array 
+Step 6: STOP
 
 //6 push,pop operation on stack
 #include <stdio.h>
@@ -471,6 +575,15 @@ int main()
     } while (choice != 4);
     return 0;
 }
+Algorithm→6
+Step 1: START 
+Step 2: Initialize Variables: 
+Step 3: Main Menu Loop: Display the menu options: PUSH, POP, DISPLAY, EXIT. 
+Step 4: Push Operation (Case 1): 
+Step 5: Pop Operation (Case 2): 
+Step 6: Display Operation (Case 3): 
+Step 7 : Exit Operation (Case 4): 
+Step 8: STOP
 
 //7.Write a program to implement enqueue and deque operations on Queue. 
 #include <stdio.h>
@@ -561,6 +674,13 @@ int main()
     } while (choice != 4);
     return 0;
 }
+Algorithm→7
+Step 1: START 
+Step 2: Declare que[MAX], front, item, choice.  
+Step 3: Initialize the above terms  
+Step 4: Enter your choice 
+Step 5: Declare a number of cases.  
+Step 6: STOP
 
 //8.Write a program to implement Singly Linked List for storing student PRN no.
 #include <stdio.h>
@@ -685,6 +805,23 @@ int main()
     } while (choice != 4);
     return 0;
 }
+Algorithm→8.a
+Step 1: START 
+Step 2: Define the structure node 
+Step 3: Define function create(struct node *head) 
+Step 4: Define the function insert_at_last(struct node *head) 
+Step 5: Define a function void display( )  
+Step 6: Define int main( )  
+Step 7: STOP
+Algorithm→8.b
+Step 1: START 
+Step 2: Define the structure node 
+Step 3: Define function create(struct node *head) 
+Step 4: Define the function insert_at_last(struct node *head) 
+Step 5: Define a function del(struct node *head) 
+Step 6: Define a function void display( )  
+Step 7: Define int main( )  
+Step 8: STOP 
 
 //9. Write a program to implement Binary Tree.
 #include <stdio.h>
@@ -801,3 +938,11 @@ int main() {
 
     return 0;
 }
+Algorithm→9
+Step 1: START 
+Step 2: Declare the structure Node with fields: data, left, right  
+Step 3: Define a function createNode( ) 
+Step 4: In the main() function: 
+   Declare a pointer root, Set root to the result of createNode() 
+Step 5: STOP 
+
