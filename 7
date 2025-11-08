@@ -1,0 +1,89 @@
+//7.Write a program to implement enqueue and deque operations on Queue. 
+#include <stdio.h>
+#define MAX 5 // Maximum size of the queue
+
+int queue[MAX]; // Array to store queue elements
+int front = -1; // Front pointer
+int rear = -1;  // Rear pointer
+// Function to add element to the queue (Enqueue)
+void enqueue()
+{
+    int value;
+    if (rear == MAX - 1)
+    {
+        printf("Queue Overflow! Cannot insert element.\n");
+    }
+    else
+    {
+        printf("Enter the value to enqueue: ");
+        scanf("%d", &value);
+        if (front == -1)
+        { // First element insertion
+            front = 0;
+        }
+        rear++;
+        queue[rear] = value;
+        printf("%d added to the queue.\n", value);
+    }
+}
+// Function to remove element from the queue (Dequeue)
+void dequeue()
+{
+    if (front == -1 || front > rear)
+    {
+        printf("Queue Underflow! No element to dequeue.\n");
+        front = -1; // Reset pointers when queue becomes empty
+        rear = -1;
+    }
+    else
+    {
+        printf("%d removed from the queue.\n", queue[front]);
+        front++;
+    }
+}
+// Function to display the queue elements
+void display()
+{
+    if (front == -1)
+    {
+        printf("Queue is empty.\n");
+    }
+    else
+    {
+        printf("Queue elements: ");
+        for (int i = front; i <= rear; i++)
+        {
+            printf("%d ", queue[i]);
+        }
+        printf("\n");
+    }
+}
+int main()
+{
+    int choice;
+    do
+    {
+        printf("\n--- Queue Operations ---\n");
+        printf("1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            enqueue();
+            break;
+        case 2:
+            dequeue();
+            break;
+        case 3:
+            display();
+            break;
+        case 4:
+            printf("Exiting program.\n");
+            break;
+        default:
+            printf("Invalid choice! Try again.\n");
+        }
+    } while (choice != 4);
+    return 0;
+}
