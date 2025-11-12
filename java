@@ -315,54 +315,6 @@ public class InheritanceDemo {
 	}
 }
 
-8.multilevel inheritance (creating diff folders)
-a>first
-package users;
-
-public class User {
-    protected String name;
-    protected String email;
-
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
-
-    public void showDetails() {
-        System.out.println("Name: " + name);
-        System.out.println("Email: " + email);
-    }
-}
-
-b>second
-package app;
-
-import customers.Customer;
-
-public class Main {
-    public static void main(String[] args) {
-        Customer cust = new Customer("Srushti", "srushti@example.com", "C123");
-        cust.showCustomerDetails();
-    }
-}
-c>
-package customers;
-
-import users.User;
-
-public class Customer extends User {
-    private String customerId;
-
-    public Customer(String name, String email, String customerId) {
-        super(name, email);  // Call parent constructor
-        this.customerId = customerId;
-    }
-
-    public void showCustomerDetails() {
-        showDetails();  // Method from User class
-        System.out.println("Customer ID: " + customerId);
-    }
-} 
 
 9.array of employee class with diff employee objects.......Employee
 public class Employee {
